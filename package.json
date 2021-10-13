@@ -1,45 +1,29 @@
 {
-  "name": "todo-reactnative",
-  "version": "1.0.0",
-  "description": "easy read native todo list",
-  "main": "index.js",
+  "main": "node_modules/expo/AppEntry.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build-react": "webpack --mode production",
-    "start": "webpack-dev-server --config ./webpack.config.js --mode development",
-    "storybook": "start-storybook -p 7007",
-    "build-storybook": "build-storybook"
+    "start": "expo start",
+    "android": "expo start --android",
+    "ios": "expo start --ios",
+    "web": "expo start --web",
+    "eject": "expo eject"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/jpbust/todo-reactnative.git"
-  },
-  "author": "Juan Pablo Bustamante",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/jpbust/todo-reactnative/issues"
-  },
-  "homepage": "https://github.com/jpbust/todo-reactnative#readme",
   "dependencies": {
-    "@babel/core": "^7.15.8",
-    "@babel/preset-env": "^7.15.8",
-    "@babel/preset-react": "^7.14.5",
-    "babel-loader": "^8.2.2",
-    "html-webpack-plugin": "^5.3.2",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2",
-    "react-native": "^0.66.0",
-    "webpack": "^5.58.0",
-    "webpack-cli": "^4.9.0",
-    "webpack-dev-server": "^4.3.1"
+    "@react-native-community/masked-view": "0.1.10",
+    "expo": "~41.0.1",
+    "expo-status-bar": "~1.0.4",
+    "react": "16.13.1",
+    "react-dom": "16.13.1",
+    "react-native": "https://github.com/expo/react-native/archive/sdk-41.0.0.tar.gz",
+    "react-native-gesture-handler": "~1.10.2",
+    "react-native-reanimated": "~2.1.0",
+    "react-native-safe-area-context": "3.2.0",
+    "react-native-screens": "~3.0.0",
+    "react-native-web": "~0.13.12",
+    "react-navigation": "^4.4.4",
+    "react-navigation-stack": "^2.10.4"
   },
   "devDependencies": {
-    "@storybook/addon-actions": "^5.3.21",
-    "@storybook/addon-knobs": "^5.3.21",
-    "@storybook/addon-links": "^5.3.21",
-    "@storybook/addon-ondevice-actions": "^5.3.23",
-    "@storybook/addon-ondevice-knobs": "^5.3.25",
-    "@storybook/react-native": "^5.3.25",
-    "@storybook/react-native-server": "^5.3.23"
-  }
+    "@babel/core": "^7.9.0"
+  },
+  "private": true
 }
