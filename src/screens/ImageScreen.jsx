@@ -10,7 +10,8 @@ const ImageScreen = ()=>{
   return (
     <View>
       <ImageDetail title='Forest'/>
-      <ImageDetail title='1'/>
+      <ImageDetail title='Beach'/>
+      <ImageDetail title='Mountain'/>
     </View>
 
   )

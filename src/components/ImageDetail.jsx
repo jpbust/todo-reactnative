@@ -1,17 +1,14 @@
 import React from 'react';
-import { View, Text, StyleSheet} from 'react-native';
+import { View, Text, StyleSheet, Images} from 'react-native';
 
 
-const ImageDetail = ({title
-
-
-})=>{
+const ImageDetail = ({title})=>{
 
 
 
   return (
 
-    <Text>This is Image Screen</Text>
+    <Text>{title}</Text>
 
   )
 };
