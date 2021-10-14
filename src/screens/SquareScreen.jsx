@@ -7,51 +7,42 @@ const SquareScreen = ()=>{
   const [green, setGreen] = useState(0);
   const [blue, setBlue] = useState(0);
 
+  // const colorChange = (color, change)=>{
+  //   switch (color) {
+  //     case 'red':
+  //       red + change >
+
+  //   }
+
+
+
+  // };
+
 
 
   return (
     <View>
-      <ColorCounter color={'Red'} value={red} style={styles.container} increase={()=>{setRed(red+1)}} decrease={()=>{setRed(red-1)}} />
-      <ColorCounter color={'Green'} value={green} style={styles.container} increase={()=>{setRed(red+1)}} decrease={()=>{setRed(red-1)}} />
-      <ColorCounter color={'Blue'} value={blue} style={styles.container} increase={()=>{setRed(red+1)}} decrease={()=>{setRed(red-1)}} />
       <Text>This is SquareScreen</Text>
-      <View style={styles.containers}>
-        <Text>Red</Text>
-        <Button
-          title='Increase Red +'
-          onPress={()=>{setRed(red+1)}}
-        />
-        <Button
-          title='Decrease Red -'
-          onPress={()=>{setRed(red-1)}}
-        />
-      </View>
-      <View style={styles.containers}>
-        <Text>Green</Text>
-        <Button
-          title='Increase Green +'
-          onPress={()=>{setGreen(green+1)}}
-        />
-        <Button
-          title='Decrease Green -'
-          onPress={()=>{setGreen(green-1)}}
-        />
-      </View>
-      <View style={styles.containers}>
-        <Text>Blue</Text>
-        <Button
-          title='Increase Blue +'
-          onPress={()=>{setBlue(blue+1)}}
-        />
-        <Button
-          title='Decrease Blue -'
-          onPress={()=>{setBlue(blue-1)}}
-        />
-      </View>
+      <ColorCounter color={'Red'} style={styles.containers}
+      increase={()=>{
+        if (red+1 > 255) {
+          return
+        } else {
+          setRed(red+1)}
+        }
+      }
 
+      decrease={()=>{
+        if (red-1 < 0) {
+          return;
+        } else {
+          setRed(red-1)
+        }
+
+      }} />
+      <ColorCounter color={'Green'} style={styles.containers} increase={()=>{setGreen(green+1)}} decrease={()=>{setGreen(green-1)}} />
+      <ColorCounter color={'Blue'}  style={styles.containers} increase={()=>{setBlue(blue+1)}} decrease={()=>{setBlue(blue-1)}} />
       <Text>{`R: ${red} | G: ${green} | B: ${blue}`}</Text>
-
-
 
       <View
        style={{
